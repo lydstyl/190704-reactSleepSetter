@@ -90,6 +90,10 @@ function floatToTime(timefloat) {
     }
     let min = timefloat[1];
     min = Math.round(parseFloat("0." + min) * 60);
+    if (min === 60) {
+      hour = parseInt(hour, 10) + 1;
+      min = 0;
+    }
     if (min < 10) {
       min = "0" + min.toString();
     }
@@ -125,8 +129,6 @@ class App extends React.Component {
         duration: parseFloat(document.querySelector("[name=duration]").value)
       }
     }).days;
-
-    console.log(days);
 
     this.setState({
       list: days
