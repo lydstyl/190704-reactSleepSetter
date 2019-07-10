@@ -35,6 +35,7 @@ function SettingSection(props) {
             step="1"
             list="duration"
             name="duration"
+            defaultValue="3"
           />
           <datalist id="duration">
             <option value="1" label="1" />
@@ -144,8 +145,12 @@ class App extends React.Component {
           vampire ...
         </p>
         <div className="settings">
-          <SettingSection sectionName="Now" setionTitle="Last time" />
-          <SettingSection sectionName="Goal" duration="true" />
+          <SettingSection sectionName="Now" setionTitle="Last time I slept" />
+          <SettingSection
+            sectionName="Goal"
+            setionTitle="My goal"
+            duration="true"
+          />
         </div>
         <button
           onClick={e => {
