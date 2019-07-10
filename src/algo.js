@@ -30,26 +30,13 @@ Settings.prototype.setDays = function() {
     const bedTime = this.now.bedTime - this.bedTimeDiff;
     const surveyTime = this.now.surveyTime - this.surveyTimeDiff;
     this.days.push({
-      bedTime: Math.round(this.humanHours(bedTime)),
+      // bedTime: Math.round(this.humanHours(bedTime)), //
+      bedTime: this.humanHours(bedTime), //
       surveyTime: surveyTime
     });
     this.now.bedTime = bedTime;
     this.now.surveyTime = surveyTime;
   }
 };
-
-// console.log(
-//   new Settings({
-//     now: {
-//       bedTime: 2,
-//       surveyTime: 13
-//     },
-//     goal: {
-//       bedTime: 22,
-//       surveyTime: 8,
-//       duration: 4
-//     }
-//   })
-// );
 
 export default Settings;

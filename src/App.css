@@ -1,33 +1,29 @@
 .App {
-  text-align: center;
+  width: 300px;
+  margin: auto;
+}
+.settings div:last-child p:last-child {
+  position: relative;
+  margin-bottom: 36px;
+}
+.settings div:last-child p:last-child input {
+  position: absolute;
+  bottom: -36px;
+}
+.settings div:last-child p:last-child datalist {
+  display: inline-flex;
+  position: absolute;
+  top: 0;
+  left: 150px;
+}
+.settings div:last-child p:last-child option {
+  margin-right: 7px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.settings p {
+  position: relative;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.settings p input {
+  position: absolute;
+  left: 150px;
 }
