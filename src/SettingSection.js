@@ -5,12 +5,17 @@ function SettingSection(props) {
       <h2>{props.setionTitle || props.sectionName}</h2>
       <p>
         <label>Bed time</label> :{" "}
-        <input type="time" name={props.sectionName.toLowerCase() + "BedTime"} />
+        <input
+          type="time"
+          defaultValue={props.bedTime}
+          name={props.sectionName.toLowerCase() + "BedTime"}
+        />
       </p>
       <p>
         <label>Survey time</label> :{" "}
         <input
           type="time"
+          defaultValue={props.surveyTime}
           name={props.sectionName.toLowerCase() + "SurveyTime"}
         />
       </p>

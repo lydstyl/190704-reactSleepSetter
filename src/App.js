@@ -49,11 +49,18 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="settings">
-          <SettingSection sectionName="Now" setionTitle="Last time I slept" />
+          <SettingSection
+            sectionName="Now"
+            setionTitle="Last time I slept"
+            bedTime="02:00"
+            surveyTime="11:00"
+          />
           <SettingSection
             sectionName="Goal"
             setionTitle="My goal"
             duration="true"
+            bedTime="22:30"
+            surveyTime="07:00"
           />
         </div>
 
