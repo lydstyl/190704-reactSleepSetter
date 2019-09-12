@@ -1,8 +1,12 @@
-import React from "react";
-import "./App.css";
-import SettingSection from "./SettingSection";
-import Instructions from "./Instructions";
-import Settings from "./algo";
+import React from 'react';
+import SettingSection from './SettingSection';
+import Instructions from './Instructions';
+import Settings from './algo';
+
+// npm i materialize-css@next
+// import 'materialize-css/dist/css/materialize.min.css';
+// import M from 'materialize-css/dist/js/materialize.min.js';
+import './App.css';
 
 function timeStringToFloat(time) {
   var hoursMinutes = time.split(/[.:]/);
@@ -23,20 +27,20 @@ class App extends React.Component {
     const days = new Settings({
       now: {
         bedTime: timeStringToFloat(
-          document.querySelector("[name=nowBedTime]").value
+          document.querySelector('[name=nowBedTime]').value
         ),
         surveyTime: timeStringToFloat(
-          document.querySelector("[name=nowSurveyTime]").value
+          document.querySelector('[name=nowSurveyTime]').value
         )
       },
       goal: {
         bedTime: timeStringToFloat(
-          document.querySelector("[name=goalBedTime]").value
+          document.querySelector('[name=goalBedTime]').value
         ),
         surveyTime: timeStringToFloat(
-          document.querySelector("[name=goalSurveyTime]").value
+          document.querySelector('[name=goalSurveyTime]').value
         ),
-        duration: parseFloat(document.querySelector("[name=duration]").value)
+        duration: parseFloat(document.querySelector('[name=duration]').value)
       }
     }).days;
 
@@ -47,20 +51,20 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="settings">
+      <div className='App'>
+        <div className='settings'>
           <SettingSection
-            sectionName="Now"
-            setionTitle="Last time I slept"
-            bedTime="02:00"
-            surveyTime="11:00"
+            sectionName='Now'
+            setionTitle='Last time I slept'
+            bedTime='02:00'
+            surveyTime='11:00'
           />
           <SettingSection
-            sectionName="Goal"
-            setionTitle="My goal"
-            duration="true"
-            bedTime="22:30"
-            surveyTime="07:00"
+            sectionName='Goal'
+            setionTitle='My goal'
+            duration='true'
+            bedTime='22:30'
+            surveyTime='07:00'
           />
         </div>
 
