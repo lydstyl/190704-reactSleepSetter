@@ -1,19 +1,53 @@
+* {
+  box-sizing: border-box;
+}
 body {
-  background-color: #311b92; /* https://www.um.es/docencia/barzana/materializecss/color.html */
+  background-color: #b39ddb; /* https://www.um.es/docencia/barzana/materializecss/color.html */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 }
 .seo-title,
 .App {
-  width: 300px;
-  margin: auto;
-  background-color: #ede7f6;
   box-sizing: border-box;
-  padding: 0 10px;
+  width: 300px;
+  margin: 20px auto;
+  padding: 10px 10px;
+  border-radius: 4px;
+  box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.3);
+  background-color: #ede7f6;
+}
+.seo-title {
+  text-align: center;
 }
 h1 {
+  margin: -10px -10px 10px -10px;
+  padding: 4px;
+  border-radius: 4px 4px 0 0;
+  box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.3);
   background-color: #512da8;
+  color: white;
+}
+h2 {
+  margin: -10px -10px 10px -10px;
+  padding: 4px;
+  border-radius: 4px 4px 0 0;
+  box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.3);
+  background-color: #512da8;
+  text-align: center;
+  color: white;
+}
+input {
+  max-width: none;
+}
+[type='time'] {
+  width: 76px;
+  border: none;
+  border-radius: 2px;
+}
+.settings div:last-child h2 {
+  margin-top: 20px;
+  border-radius: 0;
 }
 .settings div:last-child p:last-child {
   position: relative;
@@ -39,4 +73,45 @@ h1 {
 .settings p input {
   position: absolute;
   left: 150px;
+}
+
+button {
+  display: block;
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.3);
+  background-color: #512da8;
+  color: white;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 1;
+}
+button:active {
+  box-shadow: none;
+}
+
+ul {
+  padding: 0;
+  text-align: center;
+}
+li {
+  margin-bottom: 16px;
+  list-style: none;
+}
+li:before {
+  content: '';
+  display: inline-block;
+  height: 26px;
+  width: 26px;
+  margin-right: 14px;
+  margin-bottom: -18px;
+  background-image: url('https://png.pngtree.com/svg/20170421/sleep_1229945.png');
+  background-size: 26px 26px;
 }
