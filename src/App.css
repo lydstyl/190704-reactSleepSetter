@@ -74,6 +74,9 @@ input {
   position: absolute;
   left: 150px;
 }
+[type='range'] {
+  max-width: 129px;
+}
 
 button {
   display: block;
