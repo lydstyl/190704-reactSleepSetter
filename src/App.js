@@ -1,11 +1,8 @@
 import React from 'react';
-import SettingSection from './SettingSection';
+import SettingSection from './components/SettingSection';
 import Settings from './algo';
-import Instructions from './Instructions';
+import Instructions from './components/Instructions';
 
-// npm i materialize-css@next
-// import 'materialize-css/dist/css/materialize.min.css';
-// import M from 'materialize-css/dist/js/materialize.min.js';
 import './App.css';
 
 function timeStringToFloat(time) {
