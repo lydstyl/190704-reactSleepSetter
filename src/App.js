@@ -1,7 +1,7 @@
 import React from 'react';
 import SettingSection from './SettingSection';
-import Instructions from './Instructions';
 import Settings from './algo';
+import Instructions from './Instructions';
 
 // npm i materialize-css@next
 // import 'materialize-css/dist/css/materialize.min.css';
