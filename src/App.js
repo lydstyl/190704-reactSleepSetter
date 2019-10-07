@@ -1,48 +1,29 @@
 import React from 'react';
+
+import getInstructionsList from './utils/getInstructionsList';
+
 import SettingSection from './components/SettingSection';
-import Settings from './algo';
 import Instructions from './components/Instructions';
 
 import './App.css';
-
-function timeStringToFloat(time) {
-  var hoursMinutes = time.split(/[.:]/);
-  var hours = parseInt(hoursMinutes[0], 10);
-  var minutes = hoursMinutes[1] ? parseInt(hoursMinutes[1], 10) : 0;
-  return hours + minutes / 60;
-}
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      list: [] // eg [{ bedTime: 22, surveyTime: 8 }]
+      list: localStorage.getItem('instructionsList')
+        ? JSON.parse(localStorage.getItem('instructionsList'))
+        : [] // eg [{ bedTime: 22, surveyTime: 8 }]
     };
   }
 
   handleInsctructions(e) {
-    const days = new Settings({
-      now: {
-        bedTime: timeStringToFloat(
-          document.querySelector('[name=nowBedTime]').value
-        ),
-        surveyTime: timeStringToFloat(
-          document.querySelector('[name=nowSurveyTime]').value
-        )
-      },
-      goal: {
-        bedTime: timeStringToFloat(
-          document.querySelector('[name=goalBedTime]').value
-        ),
-        surveyTime: timeStringToFloat(
-          document.querySelector('[name=goalSurveyTime]').value
-        ),
-        duration: parseFloat(document.querySelector('[name=duration]').value)
-      }
-    }).days;
+    const instructionsList = getInstructionsList();
+
+    localStorage.setItem('instructionsList', JSON.stringify(instructionsList));
 
     this.setState({
-      list: days
+      list: instructionsList
     });
   }
 
