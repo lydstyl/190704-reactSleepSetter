@@ -2,6 +2,7 @@ import React from 'react';
 
 import getInstructionsList from './utils/getInstructionsList';
 
+import LastTimeISleptSettingSection from './components/LastTimeISleptSettingSection';
 import SettingSection from './components/SettingSection';
 import Instructions from './components/Instructions';
 
@@ -31,7 +32,7 @@ class App extends React.Component {
     return (
       <div className='App'>
         <div className='settings'>
-          <SettingSection
+          <LastTimeISleptSettingSection
             sectionName='Now'
             setionTitle='Last time I slept'
             bedTime='02:00'

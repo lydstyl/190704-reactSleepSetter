@@ -6,10 +6,10 @@ const getInstructionsList = () => {
   return new Settings({
     now: {
       bedTime: timeStringToFloat(
-        document.querySelector('[name=nowBedTime]').value
+        document.querySelector('[name=lastBedTime]').value
       ),
       surveyTime: timeStringToFloat(
-        document.querySelector('[name=nowSurveyTime]').value
+        document.querySelector('[name=lastSurveyTime]').value
       )
     },
     goal: {
